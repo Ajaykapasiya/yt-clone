@@ -15,15 +15,15 @@ function Navbar() {
       </div>
 
       <div className=" flex  w-[35%] items-center">
-        <div className="w-[100%] px-3 py-2 border rounded-l-full">
+        <div className="w-[100%] px-3 py-2 border border-gray-200 rounded-l-full">
           <input type="text" placeholder="Search" className="outline-none " />
         </div>
         <button className=" px-4 py-2  bg-gray-200 rounded-r-full ">
-          <CiSearch size={"24px"} />
+          <CiSearch size={"26px"} />
         </button>
         <IoMdMic
           size={"42px"}
-          className=" ml-4  rounded-full hover:bg-gray-300 duration-200 p-2 cursor-pointer"
+          className=" ml-4  rounded-full border border-gray-200 hover:bg-gray-300 duration-200 p-2 cursor-pointer"
         />
       </div>
       <div className="flex items-center  cursor-pointer">
