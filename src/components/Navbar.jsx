@@ -8,7 +8,7 @@ import logo from "../../public/logo.png";
 
 function Navbar() {
   return (
-    <div className="flex justify-between px-6 py-2">
+    <div className="flex justify-between fixed top-0 w-[100%] bg-white px-6 py-2">
       <div className="flex items-center  space-x-4 ">
         <AiOutlineMenu className="text-xl cursor-pointer" />
         <img src={logo} alt="" className="w-20 cursor-pointer" />

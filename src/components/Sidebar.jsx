@@ -133,7 +133,7 @@ function Sidebar() {
     },
     {
       id: 11,
-      name: "Padcasts",
+      name: "Podcasts",
       icon: <MdPodcasts />,
     },
   ];
@@ -161,7 +161,7 @@ function Sidebar() {
   ];
 
   return (
-    <div className="px-5 w-[15%]">
+    <div className="px-5 w-[15%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden mt-16">
       {/* Home */}
       <div className=" space-y-4  items-center">
         {SidebarItems.map((item) => {
@@ -176,14 +176,67 @@ function Sidebar() {
       <br />
       <hr />
       {/* You */}
-      <div className=" space-y-4  items-center">
+      <div className=" mt-5 space-y-4  items-center">
+        <div className="flex items-center space-x-2">
+            <h1>You</h1>
+            <FaChevronRight/>
+        </div>
         {SidebarItems2.map((item) => {
+            return(
           <div className="flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1">
             <div className="cursor-pointer text-xl"> {item.icon} </div>
             <span className="cursor-pointer">{item.name}</span>
-          </div>;
+          </div>
+            )
         })}
       </div>
+      <br />
+      <hr />
+{/* subscription */}
+
+<div className=" mt-5 space-y-4  items-center">
+<div className="flex items-center space-x-2">
+            <h1>Explore</h1>
+           
+        </div>
+        {sidebarItems3.map((item) => {
+            return(
+          <div className="flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1">
+            <div className="cursor-pointer text-xl"> {item.icon} </div>
+            <span className="cursor-pointer">{item.name}</span>
+          </div>
+            )
+        })}
+      </div>
+      <br />
+      <hr />
+{/* more from yt */}
+      <div className=" mt-5 space-y-4  items-center">
+        <div className="flex items-center">
+            <h1>More from YouTube
+            </h1>
+        </div>
+        {sidebarItems4.map((item) => {
+            return(
+          <div className="flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1">
+            <div className=" text-xl cursor-pointer  text-red-600"> {item.icon} </div>
+            <span className="cursor-pointer">{item.name}</span>
+          </div>
+            )
+        })}
+        <hr />
+      </div>
+
+      <br />
+      <span className="text-xs text-gray-600 font-semibold">
+        About Press Copyright <br /> Contact us Creators <br /> Advertise
+        Developers <br />
+        <p className="mt-3">Terms Privacy Policy & Safety</p> How YouTube works{" "}
+        <br /> Test new features
+      </span>
+      <br />
+      <p className="text-xs text-gray-500 mt-3">© 2025</p>
+
     </div>
   );
 }
