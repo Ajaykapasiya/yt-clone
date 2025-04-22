@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import { GoHome } from "react-icons/go";
 import { SiYoutubeshorts } from "react-icons/si";
 import { MdOutlineSubscriptions, MdHistory } from "react-icons/md";
@@ -25,11 +25,167 @@ import { BiVideo } from "react-icons/bi";
 import { GiLinkedRings } from "react-icons/gi";
 
 function Sidebar() {
+  const SidebarItems = [
+    {
+      id: 1,
+      name: "Home",
+      icon: <GoHome />,
+    },
+
+    {
+      id: 2,
+      name: "Shorts",
+      icon: <SiYoutubeshorts />,
+    },
+
+    {
+      id: 3,
+      name: "Subscription",
+      icon: <MdOutlineSubscriptions />,
+    },
+  ];
+
+  const SidebarItems2 = [
+    {
+      id: 1,
+      name: "Your channel",
+      icon: <PiUserSquareThin />,
+    },
+
+    {
+      id: 2,
+      name: "History",
+      icon: <MdHistory />,
+    },
+
+    {
+      id: 3,
+      name: "Playlist",
+      icon: <MdOutlineSubscriptions />,
+    },
+    {
+      id: 4,
+      name: "Your videos",
+      icon: <BiVideo />,
+    },
+    {
+      id: 5,
+      name: "Watch later",
+      icon: <MdOutlineWatchLater />,
+    },
+    {
+      id: 6,
+      name: "Liked videos",
+      icon: <AiOutlineLike />,
+    },
+  ];
+
+  const sidebarItems3 = [
+    {
+      id: 1,
+      name: "Trending",
+      icon: <SiTrendmicro />,
+    },
+    {
+      id: 2,
+      name: "Shopping",
+      icon: <HiOutlineShoppingBag />,
+    },
+    {
+      id: 3,
+      name: "Music",
+      icon: <SiYoutubemusic />,
+    },
+    {
+      id: 4,
+      name: "Films",
+      icon: <PiFilmSlateLight />,
+    },
+    {
+      id: 5,
+      name: "Live",
+      icon: <CgMediaLive />,
+    },
+    {
+      id: 6,
+      name: "Gaming",
+      icon: <IoGameControllerOutline />,
+    },
+    {
+      id: 7,
+      name: "News",
+      icon: <FaRegNewspaper />,
+    },
+    {
+      id: 8,
+      name: "Sport",
+      icon: <TfiCup />,
+    },
+    {
+      id: 9,
+      name: "Courses",
+      icon: <SiStylelint />,
+    },
+    {
+      id: 10,
+      name: "Fashion & beauty",
+      icon: <PiLightbulbLight />,
+    },
+    {
+      id: 11,
+      name: "Padcasts",
+      icon: <MdPodcasts />,
+    },
+  ];
+  const sidebarItems4 = [
+    {
+      id: 1,
+      name: "Youtube Premium",
+      icon: <FaYoutube />,
+    },
+    {
+      id: 2,
+      name: "Youtube Studio",
+      icon: <SiYoutubestudio />,
+    },
+    {
+      id: 3,
+      name: "Youtube Music",
+      icon: <SiYoutubemusic />,
+    },
+    {
+      id: 4,
+      name: "Youtube Kids",
+      icon: <SiYoutubekids />,
+    },
+  ];
+
   return (
-    <div>
-      Sidebar
+    <div className="px-5 w-[15%]">
+      {/* Home */}
+      <div className=" space-y-4  items-center">
+        {SidebarItems.map((item) => {
+          return (
+            <div className="flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1">
+              <div className="cursor-pointer text-xl"> {item.icon} </div>
+              <span className="cursor-pointer">{item.name}</span>
+            </div>
+          );
+        })}
+      </div>
+      <br />
+      <hr />
+      {/* You */}
+      <div className=" space-y-4  items-center">
+        {SidebarItems2.map((item) => {
+          <div className="flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1">
+            <div className="cursor-pointer text-xl"> {item.icon} </div>
+            <span className="cursor-pointer">{item.name}</span>
+          </div>;
+        })}
+      </div>
     </div>
-  )
+  );
 }
 
-export default Sidebar
+export default Sidebar;
