@@ -1,13 +1,14 @@
+import React from "react";
 import { createContext, useContext, useEffect, useState } from "react";
 import { fetchData } from "../utils/rapidApi";
 
-export const AuthContext = createContext;
+export const AuthContext = createContext();
 
 
 export default function AuthProvider ({children}){
     const [loading , setLoading ] =  useState(false);
     const [data , setData] = useState([]);
-    const [value, setValue] = useState("new");
+    const [value, setValue] = useState("New");
 
     useEffect (() => {
         fetchAlldata(value)
@@ -15,8 +16,8 @@ export default function AuthProvider ({children}){
 
     const fetchAlldata = (query) => {
         setLoading(true)
-        fetchData(`search/?q=${query}`).then((res) => {
-            setData(res) 
+        fetchData(`search/?q=${query}`).then(({contents}) => {
+            setData(contents) 
             setLoading(false)
         })
     }
@@ -26,5 +27,6 @@ export default function AuthProvider ({children}){
             </AuthContext.Provider>
     )
 }
-
 export const useAuth = () => useContext(AuthContext)
+
+
