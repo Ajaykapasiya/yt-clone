@@ -1,11 +1,17 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-function Video(video) {
+function Video({video}) {
     console.log(video)
   return (
-    <div className='mt-32'>
-        <link to={`video/${video?.videoID}`}>
-        </link>
+    <div className=''>
+        <Link to={`video/${video?.videoId}`}>
+        <div className='  flex flex-col'>
+            <div className='  h-48 md:h-56 md:rounded-xl hover:rounded-none duration-200 overflow-hidden'>
+                <img className='h-full w-full' src={video?.thumbnails[0]?.url} alt="" />
+            </div>
+        </div>
+        </Link>
     </div>
   )
 }
