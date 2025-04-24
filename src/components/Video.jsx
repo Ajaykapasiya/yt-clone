@@ -4,7 +4,8 @@ function Video(video) {
     console.log(video)
   return (
     <div className='mt-32'>
-      video 
+        <link to={`video/${video?.videoID}`}>
+        </link>
     </div>
   )
 }
