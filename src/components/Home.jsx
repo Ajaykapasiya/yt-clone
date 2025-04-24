@@ -1,11 +1,15 @@
-import React from 'react'
-
+import React from "react";
+import Sidebar from "./Sidebar";
+import Video from "./Video";
 function Home() {
   return (
-    <div>
-      
+    <div className="flex">
+      <Sidebar />
+      <div>
+        <Video />
+      </div>
     </div>
-  )
+  );
 }
 
-export default Home
+export default Home;

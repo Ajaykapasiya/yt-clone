@@ -2,8 +2,8 @@ import React from 'react'
 
 function PlayingVideo() {
   return (
-    <div>
-      
+    <div className='mt-32'>
+      Playing video
     </div>
   )
 }
