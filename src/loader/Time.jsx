@@ -1,6 +1,6 @@
 import React from 'react'
 
-function Time() {
+function Time({Time}) {
   return (
     <div>
       

@@ -9,6 +9,7 @@ function Video({video}) {
         <div className='  flex flex-col'>
             <div className='  h-48 md:h-56 md:rounded-xl hover:rounded-none duration-200 overflow-hidden'>
                 <img className='h-full w-full' src={video?.thumbnails[0]?.url} alt="" />
+                {video?.lengthSeconds && <Time> time={video?.lengthSeconds}/</Time>}
             </div>
         </div>
         </Link>
