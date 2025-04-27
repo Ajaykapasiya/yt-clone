@@ -7,9 +7,9 @@ function Home() {
   console.log(data);
 
   return (
-    <div className="flex">
+    <div className="flex mt-16">
       <Sidebar />
-      <div>
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-5 p-5 ">
         {data.map((item) => {
           if (item.type != "video") return false;
 

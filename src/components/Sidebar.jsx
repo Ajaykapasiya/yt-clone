@@ -161,7 +161,7 @@ function Sidebar() {
   ];
 
   return (
-    <div className="px-5 w-[15%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden mt-16">
+    <div className="px-5 w-[15%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden ">
       {/* Home */}
       <div className=" space-y-4  items-center">
         {SidebarItems.map((item) => {
