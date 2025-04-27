@@ -1,9 +1,10 @@
 import React from 'react'
 
-function Time({Time}) {
+function Time({time}) {
+    const videoTime = moment?.startOf("day")?.seconds(time)?.("H:mm:ss")
   return (
     <div>
-      
+      <span className='bottom-2 right-2 bg-black text-white px-2 py-1 text-xs rounded-md '>{videoTime}</span>
     </div>
   )
 }
