@@ -13,7 +13,7 @@ function Home() {
     <div className="flex mt-20">
       <Sidebar />
       <div className="grid grid-cols-1 md:grid-cols-4 gap-5 p-5 ">
-        {data.map((item) => {
+      {Array.isArray(data) && data.map((item) => {
           if (item.type != "video") return false;
 
           return <Video key={item.id} video={item?.video} />;

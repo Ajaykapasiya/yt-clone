@@ -1,7 +1,7 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./components/Navbar";
-import { Routes , Route } from "react-router"
+import { Routes, Route } from "react-router";
 import Home from "./components/Home";
 import Search from "./components/Search";
 import PlayingVideo from "./components/PlayingVideo";
@@ -17,9 +17,9 @@ function App() {
       <Navbar />
       {/* <Sidebar /> */}
       <Routes>
-        <Route path="/" exact element={<Home/>}/>
-        <Route path="/Search/:searchQuery" element={<Search/>}/>
-        <Route path="/Video/:id"  element={<PlayingVideo/>}/>
+        <Route path="/" exact element={<Home />} />
+        <Route path="/Search/:searchQuery" element={<Search />} />
+        <Route path="/Video/:id" element={<PlayingVideo />} />
       </Routes>
     </>
   );
