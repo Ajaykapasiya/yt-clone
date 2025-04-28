@@ -16,9 +16,9 @@ export default function AuthProvider ({children}){
 
     const fetchAlldata = (query) => {
         setLoading(true)
-        fetchData(`search/?q=${query}`).then(({contents}) => {
-            console.log(contents)
-            setData(contents) 
+        fetchData(`search/?q=${query}`).then((res) => {
+            //console.log(contents)
+            setData(res) 
             setLoading(false)
         })
     }
