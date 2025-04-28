@@ -7,7 +7,7 @@ function Home() {
   console.log(data);
 
   return (
-    <div className="flex mt-16">
+    <div className="flex mt-20">
       <Sidebar />
       <div className="grid grid-cols-1 md:grid-cols-4 gap-5 p-5 ">
         {data.map((item) => {
