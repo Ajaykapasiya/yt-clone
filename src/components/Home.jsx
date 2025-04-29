@@ -21,7 +21,7 @@ function Home() {
           data.map((item) => {
             if (item.type != "video") return false;
 
-            return <Video key={item.id} video={item?.video} />;
+            return  <Video key={item.id} video={item?.video} />;
           })}
       </div>
       </div>

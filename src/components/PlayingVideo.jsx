@@ -5,13 +5,14 @@ import { fetchData } from '../utils/rapidApi';
 
 
 function PlayingVideo() {
-  const [video , setVideo] = useState();
-  const [relatedVideo , setRelativeVideo] = useState();
+  const [video , setVideo] = useState(null);
+  const [relatedVideo , setRelativeVideo] = useState([]);
   const {id} = useParams()
 
 
 useEffect(() => {
   fetchVideoDetails();
+  
 } , [id])
 
 const fetchVideoDetails = () => {
