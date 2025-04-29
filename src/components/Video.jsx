@@ -12,6 +12,11 @@ function Video({video}) {
                 <img className='h-full w-full' src={video?.thumbnails[0]?.url} alt="" />
                 {video?.lengthSeconds && <Time> time={video?.lengthSeconds}/</Time>}
             </div>
+            <div className='flex h-9 w-9 rounded-full overflow-hidden border'>
+                <div className='h-full w-full rounded-full overflow-hidden'>
+                    <img src={video?.author?.avatar[0].url} alt="" />
+                </div>
+            </div>
         </div>
         </Link>
     </div>
