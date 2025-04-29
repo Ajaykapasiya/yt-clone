@@ -1,26 +1,41 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
-import Time from "../loader/Time"
+import React from "react";
+import { Link } from "react-router-dom";
+import Time from "../loader/Time";
 
-function Video({video}) {
-    console.log(video)
+function Video({ video }) {
+  console.log(video);
   return (
-    <div className=''>
-        <Link to={`video/${video?.videoId}`}>
-        <div className='  flex flex-col'>
-            <div className=' relative h-48 md:h-56 md:rounded-xl hover:rounded-none duration-200 overflow-hidden'>
-                <img className='h-full w-full' src={video?.thumbnails[0]?.url} alt="" />
-                {video?.lengthSeconds && <Time> time={video?.lengthSeconds}/</Time>}
+    <div className="">
+      <Link to={`video/${video?.videoId}`}>
+        <div className="  flex flex-col">
+          <div className=" relative h-48 md:h-56 md:rounded-xl hover:rounded-none duration-200 overflow-hidden">
+            <img
+              className="h-full w-full"
+              src={video?.thumbnails[0]?.url}
+              alt=""
+            />
+            {video?.lengthSeconds && <Time> time={video?.lengthSeconds}/</Time>}
+          </div>
+          <div className="flex mt-3 space-x-2 ">
+            <div className="flex items-start">
+              <div className="flex h-9 w-9 rounded-full overflow-hidden border">
+                <img
+                  className=" h-full  w-full rounded-full overflow-hidden"
+                  src={video?.author?.avatar[0].url}
+                  alt=""
+                />
+              </div>
             </div>
-            <div className='flex h-9 w-9 rounded-full overflow-hidden border'>
-                <div className='h-full w-full rounded-full overflow-hidden'>
-                    <img src={video?.author?.avatar[0].url} alt="" />
-                </div>
+            <div>
+              <span className="text-sm font-bold line-clamp-2">
+                {video.title}
+              </span>
             </div>
+          </div>
         </div>
-        </Link>
+      </Link>
     </div>
-  )
+  );
 }
 
-export default Video
+export default Video;
