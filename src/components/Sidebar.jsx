@@ -161,12 +161,12 @@ function Sidebar() {
   ];
 
   return (
-    <div className="px-5 w-[13%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden ">
+    <div className="px-5 w-[18%] h-[calc(100vh-6.625rem)] overflow-y-scroll overflow-x-hidden ">
       {/* Home */}
       <div className=" space-y-4  items-center">
         {SidebarItems.map((item) => {
           return (
-            <div className="flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1">
+            <div  key={item.id}className="flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1">
               <div className="cursor-pointer text-xl"> {item.icon} </div>
               <span className="cursor-pointer">{item.name}</span>
             </div>
@@ -183,7 +183,7 @@ function Sidebar() {
         </div>
         {SidebarItems2.map((item) => {
             return(
-          <div className="flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1">
+          <div key={item.id}className="flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1">
             <div className="cursor-pointer text-xl"> {item.icon} </div>
             <span className="cursor-pointer">{item.name}</span>
           </div>
@@ -201,7 +201,7 @@ function Sidebar() {
         </div>
         {sidebarItems3.map((item) => {
             return(
-          <div className="flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1">
+          <div key={item.id}className="flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1">
             <div className="cursor-pointer text-xl"> {item.icon} </div>
             <span className="cursor-pointer">{item.name}</span>
           </div>
@@ -218,7 +218,7 @@ function Sidebar() {
         </div>
         {sidebarItems4.map((item) => {
             return(
-          <div className="flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1">
+          <div key={item.id}className="flex items-center space-x-6 hover:bg-gray-200 duration-300 rounded-xl p-1">
             <div className=" text-xl cursor-pointer  text-red-600"> {item.icon} </div>
             <span className="cursor-pointer">{item.name}</span>
           </div>
