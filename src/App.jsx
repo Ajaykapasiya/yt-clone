@@ -6,7 +6,7 @@ import Home from "./components/Home";
 import Search from "./components/Search";
 import PlayingVideo from "./components/PlayingVideo";
 
-//import Sidebar from "./components/Sidebar";
+import Sidebar from "./components/Sidebar";
 import { useAuth } from "./context/AuthProvider";
 function App() {
   const { loading, data } = useAuth();

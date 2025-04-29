@@ -6,11 +6,9 @@ import "./index.css";
 import AuthProvider from "./context/AuthProvider"; // Import AuthProvider
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-  //<React.StrictMode>
-    <AuthProvider> {/* Wrap App with AuthProvider */}
-      <BrowserRouter>
-        <App />
-      </BrowserRouter>
+  <BrowserRouter>
+    <AuthProvider>
+      <App />
     </AuthProvider>
- // </React.StrictMode>
+  </BrowserRouter>
 );
