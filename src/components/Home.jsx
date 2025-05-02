@@ -18,10 +18,10 @@ function Home() {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 p-5 ">
         
         {!loading &&
-          data.map((item) => {
+          data.map((item ,index) => {
             if (item.type != "video") return false;
 
-            return  <Video key={item.id} video={item?.video} />;
+            return  <Video key={item.id || index} video={item?.video} />;
           })}
       </div>
       </div>
