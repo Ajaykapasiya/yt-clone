@@ -34,9 +34,4 @@ function ListItems() {
             </div>
           );
         })}
-      </div>
-    </div>
-  );
-}
-
-export default ListItems;
+  
