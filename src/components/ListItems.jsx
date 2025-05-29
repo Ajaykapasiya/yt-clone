@@ -12,14 +12,7 @@ function ListItems() {
     "News",
     "Mixes",
     "1990s",
-    "Telugu cinema",
-    "Live",
-    "Dramedy",
-    "Dubbing",
-    "Indian soap opera",
-    "Cricket",
-    "Football",
-    "Learn Coding",
+    
   ];
   return (
     <div className=" mb-4 flex overflow-x-scroll hide-scroll-bar px-4">
