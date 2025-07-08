@@ -2,7 +2,7 @@ import React from "react";
 import Sidebar from "./Sidebar";
 import Video from "./Video";
 import { useAuth } from "../context/AuthProvider";
-import ListItems from "./listItems";
+import ListItems from "./ListItems";
 import Loading from "../loader/Loading";
 
 function Home() {
