@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { fetchData } from "../utils/rapidapi";
+import { fetchData } from "../utils/rapidApi";
 import Sidebar from "./Sidebar";
 import SearchCard from "./SearchCard"; 
 
